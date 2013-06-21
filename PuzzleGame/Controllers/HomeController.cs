@@ -30,9 +30,9 @@ namespace PuzzleGame.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddScore(String Name, int Score)
+        public ActionResult AddScore(String Name, int Score, int Difficulty)
         {
-            database.Score.Add(new TabelScore { Name = Name, Score = Score});
+            database.Score.Add(new TabelScore { Name = Name, Score = Score, Difficulty = Difficulty});
             database.SaveChanges();
             return Json(database.Score.ToList(), JsonRequestBehavior.AllowGet);
         }

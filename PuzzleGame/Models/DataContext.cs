@@ -26,8 +26,10 @@ namespace PuzzleGame.Models
         public int Score_id { get; set; }
         [Column("Player"), StringLength(50)]
         public String Name { get; set; }
-        [Column ("Score")]
+        [Column("Score")]
         public int Score { get; set; }
+        [Column("Difficulty")]
+        public int Difficulty { get; set; }
     }
 
 }
